@@ -23,7 +23,10 @@ public class RTC011LoginPOM {
 	private WebElement password;
 	
 	@FindBy(xpath="//input[@type='submit' and @name ='login']")
-	private WebElement SigninBtn; 
+	private WebElement SigninBtn;
+	
+	@FindBy(xpath="//div[contains(text(),'Comments')]")
+	private WebElement commentlnk;
 	
 	
 	public void clickSigninlnk() {
@@ -44,4 +47,9 @@ public class RTC011LoginPOM {
 	public void clickSigninBtn() {
 		this.SigninBtn.click(); 
 	}
+	
+	public void clickcommentlnk( ) {
+		this.commentlnk.click();
+	}
+
 }
